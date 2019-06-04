@@ -1,0 +1,115 @@
+<body>
+<div style="background-color:red;width:10px;height:10px"></div>
+
+        <div class="fb-customerchat"
+             page_id="1230694363743762"
+             minimized="true">
+        </div>
+			
+      <div id="fb-root"></div>
+
+<div class="fb-messengermessageus" 
+  messenger_app_id="2083002181766755" 
+  page_id="1230694363743762"
+  color="<blue | white>"
+  size="<standard | large | xlarge>">
+</div>
+        <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
+        <div style="background-color:yellow;width:10px;height:10px"></div>
+
+  <div ng-app="navTest" ng-controller="NavTestCtrl">
+    <div class="item" ng-click="aoClicar($event)" ng-mouseenter="noEntrarDoMouse($event)" ng-mouseleave="noSairDoMouse($event)">
+Angular
+    </div>
+  </div>
+
+  <div class="item" onmouseenter="noEntrarDoMouse(event)"     onmouseleave="noSairDoMouse(event)" onclick="aoClicar()">
+Javascript
+  </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- 
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '2083002181766755',
+      xfbml      : true,
+      version    : 'v3.2'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script> -->
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '2083002181766755',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v3.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script lang="javascript">
+
+        // window.fbAsyncInit = function () {
+        //     FB.init({
+        //         appId: '2083002181766755',
+        //         autoLogAppEvents: true,
+        //         xfbml: true,
+        //         cookie: true,
+        //         version: 'v3.2'
+        //     });
+
+        // };
+
+        // (function (d, s, id) {
+        //     var js, fjs = d.getElementsByTagName(s)[0];
+        //     if (d.getElementById(id)) return;
+        //     js = d.createElement(s); js.id = id;
+        //     js.src = "https://connect.facebook.net/pt_BR/sdk/xfbml.customerchat.js";
+        //     fjs.parentNode.insertBefore(js, fjs);
+        // }(document, 'script', 'facebook-jssdk'));
+
+
+  function aoClicar(){
+    alert('Oi do Javascript');
+  }
+
+  function noEntrarDoMouse(ev){
+    $(ev.target).removeClass('botao-laranja');
+    $(ev.target).addClass('botao-azul');
+  }
+
+  function noSairDoMouse(ev){
+    $(ev.target).removeClass('botao-azul');
+    $(ev.target).addClass('botao-laranja');
+  }
+
+</script>
